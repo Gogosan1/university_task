@@ -4,12 +4,12 @@ CREATE TABLE university_groups(
     created_at DATETIME(6) NOT NULL
 );
 
-CREATE TABLE students(
+CREATE TABLE student(
     id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(255) NOT NULL,
     acceptance_date DATE NOT NULL,
     group_id BIGINT UNSIGNED,
     
-    FOREIGN KEY (group_id) REFERENCES university_groups(id) 
+    FOREIGN KEY (group_id) REFERENCES university_groups(id)
     ON DELETE RESTRICT ON UPDATE RESTRICT
 );

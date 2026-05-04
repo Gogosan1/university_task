@@ -1,4 +1,11 @@
 databaseChangeLog:
-  - include:
-      file: db/changelog/changes/001-start-initialization.sql
+  - changeSet:
+      id: 001-start-initialization-v2
+      author: demo
+      sqlFile:
+        path: changes/001-start-initialization.sql
+        relativeToChangelogFile: true
+        splitStatements: true
+        stripComments: true
+        endDelimiter: ";"
 
